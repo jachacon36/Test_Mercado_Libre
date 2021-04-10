@@ -4,18 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".activity.HomeActivity">
 
     <LinearLayout
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@color/colorPrimaryDark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_menu"
+                android:tint="@color/colorAccent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
 
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/search_bg"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_shopping_cart"
+                android:tint="@color/colorAccent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:drawablePadding="8dp"
+            android:textSize="7pt"
+            android:text="@string/direction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right"
+            android:drawableLeft="@drawable/ic_baseline_place"
+            android:drawableStart="@drawable/ic_baseline_place"
+            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right" />
     </LinearLayout>
+
 
     <TextView
         android:layout_width="wrap_content"
