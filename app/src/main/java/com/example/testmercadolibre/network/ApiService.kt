@@ -1,12 +1,16 @@
 package com.example.testmercadolibre.network
 
+import com.example.testmercadolibre.model.ResultModel
+import com.example.testmercadolibre.model.SearchModel
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import kotlinx.coroutines.Deferred
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
+import retrofit2.http.*
 import java.util.concurrent.TimeUnit
 
 private const val BASE_URL = "https://api.mercadolibre.com"
@@ -41,5 +45,7 @@ object Api {
 }
 
 interface ApiService {
-
+    @GET("/sites/MLA/search?")
+    fun getSearch(@Query("q") query: String):
+            Deferred<SearchModel>
 }
