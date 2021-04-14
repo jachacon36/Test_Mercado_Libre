@@ -1,5 +1,6 @@
 package com.example.testmercadolibre.network
 
+import com.example.testmercadolibre.model.DetailProductModel
 import com.example.testmercadolibre.model.ResultModel
 import com.example.testmercadolibre.model.SearchModel
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
@@ -48,4 +49,8 @@ interface ApiService {
     @GET("/sites/MCO/search?")
     fun getSearch(@Query("q") query: String):
             Deferred<SearchModel>
+
+    @GET("/items/{id}")
+    fun getItem(@Path("id") id: String):
+            Deferred<DetailProductModel>
 }

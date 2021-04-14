@@ -2,4 +2,12 @@
     <string name="app_name">Test Mercado Libre</string>
     <string name="direction">Enviar a mi direccion</string>
     <string name="free_shipping">Envio gratis</string>
+    <string name="not_found_title">No encontramos publicaciones</string>
+    <string name="not_found_body">Revisa que la palabra este bien escrita.</string>
+    <string name="product">Producto</string>
+    <string name="stock">Stock disponible</string>
+    <string name="buy">Comprar ahora</string>
+    <string name="add_car">Agregar al carrito</string>
+    <string name="new_title">Nuevo</string>
+    <string name="used_title">Usado</string>
 </resources>

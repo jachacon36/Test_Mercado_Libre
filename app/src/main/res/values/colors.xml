@@ -7,6 +7,9 @@
     <color name="white">#fff</color>
     <color name="green">#00A650</color>
     <color name="blue">#3483FA</color>
+    <color name="buy_button">#2968C8</color>
+    <color name="favorite_button">#D9E7FA</color>
+
 
 
 </resources>

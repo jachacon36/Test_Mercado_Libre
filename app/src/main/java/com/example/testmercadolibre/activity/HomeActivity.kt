@@ -1,5 +1,6 @@
 package com.example.testmercadolibre.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -12,6 +13,8 @@ import com.example.testmercadolibre.adapters.ExhibitorAdapter
 import com.example.testmercadolibre.utils.Status
 import com.example.testmercadolibre.viewmodel.HomeViewModel
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_home.search
+import kotlinx.android.synthetic.main.activity_search.*
 import kotlinx.android.synthetic.main.activity_search.loader
 
 class HomeActivity : AppCompatActivity() {
@@ -25,6 +28,7 @@ class HomeActivity : AppCompatActivity() {
         initView()
         initViewModel()
         observeViewModel()
+        searchListener()
         homeViewModel.getHome(this)
     }
 
@@ -68,6 +72,34 @@ class HomeActivity : AppCompatActivity() {
         exhibitorAdapter = ExhibitorAdapter()
         exhibitorRV.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL ,false)
         exhibitorRV.adapter = exhibitorAdapter
+    }
+
+    private fun searchListener(){
+        search.setOnQueryTextListener(object :
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextChange(newText: String): Boolean {
+                return false
+            }
+
+            override fun onQueryTextSubmit(query: String): Boolean {
+                openSearchActivity(query)
+                return false
+            }
+
+        })
+    }
+
+    private fun openSearchActivity(query: String){
+        val intent : Intent = Intent(this, SearchActivity::class.java).putExtra("query",query )
+        startActivityForResult(intent, 200)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 200){
+            search.setQuery("", false)
+            search.isIconified = true;
+        }
     }
 
 }

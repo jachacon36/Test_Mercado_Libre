@@ -502,166 +502,77 @@
          }
       },
       {
-         "id":"promotions-recommendations",
-         "type":"recommendations",
-         "track":{
-            "c_id":"/home/promotions-recommendations"
+         "id": "today-promotion-recommendations",
+         "type": "recommendations-seed",
+         "track": {
+            "c_id": "/home/today-promotion-recommendations"
          },
-         "header":{
-            "title":{
-               "text":"Ofertas",
-               "color":"black"
+         "header": {
+            "title": {
+               "text": "Oferta del día",
+               "color": "black"
             }
          },
-         "items":[
-            {
-               "id":"MCO608140423",
-               "track":{
-                  "c_id":"/home/promotions-recommendations/element",
-                  "c_element_order":1
-               },
-               "title":"Tv LG 49  Pulgadas 123 Cm 49un7100 Led 4k-uhd Plano Smart Tv",
-               "permalink":"meli://items-core/MCO608140423/#reco_item_pos=0&reco_backend=promotions-sorted-by-score-mco-B&reco_backend_type=low_level&reco_client=home_seller-promotions-recommendations&reco_id=51f9ee4a-89f1-4a73-9498-c7b264e621e6&c_id=/home/promotions-recommendations/element&c_element_order=1&c_uid=2a85096d-b445-4247-98d6-0bf48828fa11",
-               "price":{
-                  "value":1449000,
-                  "original_value":2699900,
-                  "currency_symbol":"$"
-               },
-               "label1":{
-                  "color":"green_primary"
-               },
-               "label2":{
-                  "text":"Envío gratis",
-                  "color":"green_primary"
-               },
-               "discount":{
-                  "text":"46% OFF",
-                  "color":"green_primary"
-               },
-               "picture":{
-                  "id":"753820-MCO44928102725_022021"
-               }
+         "action": {
+            "label": {
+               "text": "Ver todas las ofertas",
+               "color": "blue"
             },
-            {
-               "id":"MCO471601768",
-               "track":{
-                  "c_id":"/home/promotions-recommendations/element",
-                  "c_element_order":2
-               },
-               "title":"Olla A Presion En Acero Inox 6ltr Lamart Ltdsd6 Abrefacil",
-               "permalink":"meli://items-core/MCO471601768/#reco_item_pos=1&reco_backend=promotions-sorted-by-score-mco-B&reco_backend_type=low_level&reco_client=home_seller-promotions-recommendations&reco_id=51f9ee4a-89f1-4a73-9498-c7b264e621e6&c_id=/home/promotions-recommendations/element&c_element_order=2&c_uid=acf56124-5e5a-404c-a63a-b1ef718861a8",
-               "price":{
-                  "value":279900,
-                  "original_value":499900,
-                  "currency_symbol":"$"
-               },
-               "label1":{
-                  "color":"green_primary"
-               },
-               "label2":{
-                  "text":"Envío gratis",
-                  "color":"green_primary"
-               },
-               "label2_icon":"home_green-fulfillment",
-               "discount":{
-                  "text":"44% OFF",
-                  "color":"green_primary"
-               },
-               "picture":{
-                  "id":"637736-MCO31036176114_062019"
-               }
-            },
-            {
-               "id":"MCO562350181",
-               "track":{
-                  "c_id":"/home/promotions-recommendations/element",
-                  "c_element_order":3
-               },
-               "title":"Carro Carrito Organizador De 3 Estanterías Begônia Negro ",
-               "permalink":"meli://items-core/MCO562350181/?variation=55733590973#reco_item_pos=2&reco_backend=promotions-sorted-by-score-mco-B&reco_backend_type=low_level&reco_client=home_seller-promotions-recommendations&reco_id=51f9ee4a-89f1-4a73-9498-c7b264e621e6&c_id=/home/promotions-recommendations/element&c_element_order=3&c_uid=90cfe4ff-f4c9-4891-afe6-cc4cfbee8e6f",
-               "price":{
-                  "value":132900,
-                  "original_value":189900,
-                  "currency_symbol":"$"
-               },
-               "label1":{
-                  "color":"green_primary"
-               },
-               "label2":{
-                  "text":"Envío gratis",
-                  "color":"green_primary"
-               },
-               "label2_icon":"home_green-fulfillment",
-               "discount":{
-                  "text":"30% OFF",
-                  "color":"green_primary"
-               },
-               "picture":{
-                  "id":"627287-MCO43570536046_092020"
-               }
-            },
-            {
-               "id":"MCO566415870",
-               "track":{
-                  "c_id":"/home/promotions-recommendations/element",
-                  "c_element_order":4
-               },
-               "title":"Tónico, Quita Manchas, Acné, Aclarante, Pecas, Magistral",
-               "permalink":"meli://items-core/MCO566415870/?variation=57958469771#reco_item_pos=3&reco_backend=promotions-sorted-by-score-mco-B&reco_backend_type=low_level&reco_client=home_seller-promotions-recommendations&reco_id=51f9ee4a-89f1-4a73-9498-c7b264e621e6&c_id=/home/promotions-recommendations/element&c_element_order=4&c_uid=def260e9-01e8-456b-b391-c1581546e710",
-               "price":{
-                  "value":27753,
-                  "original_value":29525,
-                  "currency_symbol":"$"
-               },
-               "label1":{
-                  "color":"green_primary"
-               },
-               "discount":{
-                  "text":"6% OFF",
-                  "color":"green_primary"
-               },
-               "picture":{
-                  "id":"648941-MCO42194742514_062020"
-               }
-            }
-         ],
-         "action":{
-            "label":{
-               "text":"Ver todas",
-               "color":"blue"
-            },
-            "target":"meli://generic_landing?url=https://www.mercadolibre.com.co/ofertas#c_id=/home/promotions-recommendations/element&c_uid=f92f850b-7441-412e-857f-56695a7d4a32"
+            "target": "meli://generic_landing?url=https://www.mercadolibre.com.co/ofertas#c_id=/home/today-promotion-recommendations&c_uid=37c589be-7d7b-4573-82f1-37e8fb1ee19a"
          },
-         "render":"mosaic",
-         "reco_track":{
-            "event_data":{
-               "recommendations":{
-                  "model_version":"1.0",
-                  "model_id":"promotions-sorted-by-score",
-                  "recommended_items":[
+         "reco_track": {
+            "event_data": {
+               "recommendations": {
+                  "has_errors": false,
+                  "has_recommendations": true,
+                  "backend_id": "fury_recommendations-functions-api",
+                  "function": "today_promotion",
+                  "recommendation_backend_name": "today_promotion",
+                  "items_extra_data": {},
+                  "trigger": {
+                     "trigger_type": "items",
+                     "items_info": {}
+                  },
+                  "recommended_items": [
                      {
-                        "id":"MCO608140423"
-                     },
-                     {
-                        "id":"MCO471601768"
-                     },
-                     {
-                        "id":"MCO562350181"
-                     },
-                     {
-                        "id":"MCO566415870"
+                        "id": "MCO558338513"
                      }
                   ],
-                  "backend_id":"MCO-today-promotions-backend-api"
+                  "recommendation_client_id": "home_today-promotion-recommendations-seed",
+                  "config_type": ""
                }
             },
-            "experiments":[
-               {
-                  "name":"recommendations/prueba-promotions-MCO",
-                  "variant_id":5531
-               }
-            ]
-         }
+            "experiments": []
+         },
+         "item": {
+            "id": "MCO558338513",
+            "track": {
+               "c_id": "/home/today-promotion-recommendations/element",
+               "c_element_order": 1
+            },
+            "title": "Televisor LG 43lm6300 Led Fhd - Active Hdr Smart Tv",
+            "permalink": "meli://items-core/MCO558338513/#reco_item_pos=0&reco_backend=today_promotion&reco_backend_type=function&reco_client=home_today-promotion-recommendations-seed&reco_id=6c766902-5d94-439e-bc4d-1b0a900eca5d&c_id=/home/today-promotion-recommendations/element&c_element_order=1&c_uid=db13d225-7981-4262-b3c2-7243790fb694",
+            "price": {
+               "value": 1195900,
+               "original_value": 1649900,
+               "currency_symbol": "$"
+            },
+            "label1": {
+               "color": "green_primary"
+            },
+            "label2": {
+               "text": "Envío gratis",
+               "color": "green_primary"
+            },
+            "discount": {
+               "text": "27% OFF",
+               "color": "green_primary"
+            },
+            "picture": {
+               "id": "722964-MCO45063823025_032021"
+            }
+         },
+         "action_type": "link"
       },
       {
          "type":"collections",
@@ -1126,6 +1037,9 @@
             "target":"meli://generic_landing?url=https%3A%2F%2Fwww.mercadolibre.com.co%2Fcategorias&back_style=menu&search_mode=none"
          }
       }
+
+
+
    ],
    "picture_config":{
       "template_seed":"https://http2.mlstatic.com/S_Q_NP_2X_{id}-V.webp",

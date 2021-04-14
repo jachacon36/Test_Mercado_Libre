@@ -11,10 +11,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.testmercadolibre.R
+import com.example.testmercadolibre.`interface`.OpenItemDetail
 import com.example.testmercadolibre.model.ResultModel
 import kotlinx.android.synthetic.main.item_result.view.*
 
-class SearchAdapter() : RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
+class SearchAdapter(val openItemDetail: OpenItemDetail) : RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
 
     var listResult: ArrayList<ResultModel> = arrayListOf()
 
@@ -34,6 +35,7 @@ class SearchAdapter() : RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItems(listResult[position])
         holder.itemView.container.setOnClickListener {
+            openItemDetail.openDetailActivity(listResult[position].id)
         }
 
 
