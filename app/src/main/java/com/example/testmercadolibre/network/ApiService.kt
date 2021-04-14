@@ -45,7 +45,7 @@ object Api {
 }
 
 interface ApiService {
-    @GET("/sites/MLA/search?")
+    @GET("/sites/MCO/search?")
     fun getSearch(@Query("q") query: String):
             Deferred<SearchModel>
 }

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Test Mercado Libre</string>
     <string name="direction">Enviar a mi direccion</string>
+    <string name="free_shipping">Envio gratis</string>
 </resources>
