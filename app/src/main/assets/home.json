@@ -81,965 +81,172 @@
          "timer":0
       },
       {
-         "type":"button-row",
-         "elements":[
-            {
-               "picture":{
-                  "id":"home_row_qr"
-               },
-               "action":{
-                  "label":{
-                     "text":"Pagar con QR",
-                     "color":"gray_450"
-                  },
-                  "target":"meli://cross-link/?deeplink=mercadopago%3A%2F%2Fmp%2Fscan_qr%3Ffrom%3Dhome_ml&from=home_ml&app_version=2.119.0"
-               },
-               "track_event":{
-                  "melidata_event":{
-                     "path":"/home/tap",
-                     "event_data":{
-                        "is_modal":false,
-                        "tag_id":"Pagar con QR",
-                        "section":"button-row",
-                        "position":0
-                     }
-                  }
-               }
-            },
-            {
-               "picture":{
-                  "id":"home_row_ofertas_blue"
-               },
-               "action":{
-                  "label":{
-                     "text":"Ofertas\nNUEVO",
-                     "color":"blue"
-                  },
-                  "target":"meli://generic_landing?url=https://www.mercadolibre.com.co/ofertas"
-               },
-               "track_event":{
-                  "melidata_event":{
-                     "path":"/home/tap",
-                     "event_data":{
-                        "is_modal":false,
-                        "tag_id":"Ofertas\nNUEVO",
-                        "section":"button-row",
-                        "position":1
-                     }
-                  }
-               }
-            },
-            {
-               "picture":{
-                  "id":"home_row_historial"
-               },
-               "action":{
-                  "label":{
-                     "text":"Historial",
-                     "color":"gray_450"
-                  },
-                  "target":"meli://home/navigation_history"
-               },
-               "track_event":{
-                  "melidata_event":{
-                     "path":"/home/tap",
-                     "event_data":{
-                        "is_modal":false,
-                        "tag_id":"Historial",
-                        "section":"button-row",
-                        "position":2
-                     }
-                  }
-               }
-            },
-            {
-               "picture":{
-                  "id":"home_row_vehiculos"
-               },
-               "action":{
-                  "label":{
-                     "text":"Carros, motos y otros",
-                     "color":"gray_450"
-                  },
-                  "target":"meli://classifieds-homes/motors"
-               },
-               "track_event":{
-                  "melidata_event":{
-                     "path":"/home/tap",
-                     "event_data":{
-                        "is_modal":false,
-                        "tag_id":"Carros, motos y otros",
-                        "section":"button-row",
-                        "position":3
-                     }
-                  }
-               }
-            }
-         ],
-         "view_more":{
-            "label":{
-               "text":"Ver más",
-               "color":"gray_450"
-            },
-            "picture":{
-               "id":"home_row_mas"
-            },
-            "modal":{
-               "track":{
-                  "c_id":"/home/button-row/modal"
-               },
-               "sections":[
-                  {
-                     "title":{
-                        "text":"Mercado Pago",
-                        "color":"black"
-                     },
-                     "elements":[
-                        {
-                           "picture":{
-                              "id":"home_qr"
-                           },
-                           "action":{
-                              "label":{
-                                 "text":"Pagar con QR",
-                                 "color":"gray_450"
-                              },
-                              "target":"meli://cross-link/?deeplink=mercadopago%3A%2F%2Fmp%2Fscan_qr%3Ffrom%3Dhome_ml&from=home_ml&app_version=2.119.0"
-                           },
-                           "track_event":{
-                              "melidata_event":{
-                                 "path":"/home/tap",
-                                 "event_data":{
-                                    "is_modal":true,
-                                    "tag_id":"Pagar con QR",
-                                    "section":"button-row-mp",
-                                    "position":0
-                                 }
-                              }
-                           }
-                        },
-                        {
-                           "picture":{
-                              "id":"home_recarga-celulares"
-                           },
-                           "action":{
-                              "label":{
-                                 "text":"Recargar celular",
-                                 "color":"gray_450"
-                              },
-                              "target":"meli://cross-link/?deeplink=mercadopago%3A%2F%2Fcellphone-recharge%3Ffrom%3Dhome_ml&from=home_ml&app_version=2.119.0"
-                           },
-                           "track_event":{
-                              "melidata_event":{
-                                 "path":"/home/tap",
-                                 "event_data":{
-                                    "is_modal":true,
-                                    "tag_id":"Recargar celular",
-                                    "section":"button-row-mp",
-                                    "position":1
-                                 }
-                              }
-                           }
-                        },
-                        {
-                           "picture":{
-                              "id":"home_billetera"
-                           },
-                           "action":{
-                              "label":{
-                                 "text":"Billetera",
-                                 "color":"gray_450"
-                              },
-                              "target":"meli://cross-link/?deeplink=mercadopago%3A%2F%2Fhome%3Ffrom%3Dhome_ml&from=home_ml&app_version=2.119.0"
-                           },
-                           "track_event":{
-                              "melidata_event":{
-                                 "path":"/home/tap",
-                                 "event_data":{
-                                    "is_modal":true,
-                                    "tag_id":"Billetera",
-                                    "section":"button-row-mp",
-                                    "position":2
-                                 }
-                              }
-                           }
-                        }
-                     ]
-                  },
-                  {
-                     "title":{
-                        "text":"Descubre",
-                        "color":"black"
-                     },
-                     "elements":[
-                        {
-                           "picture":{
-                              "id":"home_tiendas-oficiales"
-                           },
-                           "action":{
-                              "label":{
-                                 "text":"Tiendas Oficiales",
-                                 "color":"gray_450"
-                              },
-                              "target":"meli://official_stores/"
-                           },
-                           "track_event":{
-                              "melidata_event":{
-                                 "path":"/home/tap",
-                                 "event_data":{
-                                    "is_modal":true,
-                                    "tag_id":"Tiendas Oficiales",
-                                    "section":"button-row-discover",
-                                    "position":0
-                                 }
-                              }
-                           }
-                        },
-                        {
-                           "picture":{
-                              "id":"home_ofertas_gray"
-                           },
-                           "action":{
-                              "label":{
-                                 "text":"Ofertas",
-                                 "color":"gray_450"
-                              },
-                              "target":"meli://generic_landing?url=https://www.mercadolibre.com.co/ofertas"
-                           },
-                           "track_event":{
-                              "melidata_event":{
-                                 "path":"/home/tap",
-                                 "event_data":{
-                                    "is_modal":true,
-                                    "tag_id":"Ofertas",
-                                    "section":"button-row-discover",
-                                    "position":1
-                                 }
-                              }
-                           }
-                        },
-                        {
-                           "picture":{
-                              "id":"home_historial"
-                           },
-                           "action":{
-                              "label":{
-                                 "text":"Historial",
-                                 "color":"gray_450"
-                              },
-                              "target":"meli://home/navigation_history"
-                           },
-                           "track_event":{
-                              "melidata_event":{
-                                 "path":"/home/tap",
-                                 "event_data":{
-                                    "is_modal":true,
-                                    "tag_id":"Historial",
-                                    "section":"button-row-discover",
-                                    "position":2
-                                 }
-                              }
-                           }
-                        },
-                        {
-                           "picture":{
-                              "id":"home_vehiculos"
-                           },
-                           "action":{
-                              "label":{
-                                 "text":"Carros, motos y otros",
-                                 "color":"gray_450"
-                              },
-                              "target":"meli://classifieds-homes/motors"
-                           },
-                           "track_event":{
-                              "melidata_event":{
-                                 "path":"/home/tap",
-                                 "event_data":{
-                                    "is_modal":true,
-                                    "tag_id":"Carros, motos y otros",
-                                    "section":"button-row-discover",
-                                    "position":3
-                                 }
-                              }
-                           }
-                        },
-                        {
-                           "picture":{
-                              "id":"home_inmuebles"
-                           },
-                           "action":{
-                              "label":{
-                                 "text":"Inmuebles",
-                                 "color":"gray_450"
-                              },
-                              "target":"meli://classifieds-homes/real_estate"
-                           },
-                           "track_event":{
-                              "melidata_event":{
-                                 "path":"/home/tap",
-                                 "event_data":{
-                                    "is_modal":true,
-                                    "tag_id":"Inmuebles",
-                                    "section":"button-row-discover",
-                                    "position":4
-                                 }
-                              }
-                           }
-                        },
-                        {
-                           "picture":{
-                              "id":"home_moda"
-                           },
-                           "action":{
-                              "label":{
-                                 "text":"Moda",
-                                 "color":"gray_450"
-                              },
-                              "target":"meli://generic_landing?url=https%3A%2F%2Fwww.mercadolibre.com.co%2Fmoda"
-                           },
-                           "track_event":{
-                              "melidata_event":{
-                                 "path":"/home/tap",
-                                 "event_data":{
-                                    "is_modal":true,
-                                    "tag_id":"Moda",
-                                    "section":"button-row-discover",
-                                    "position":5
-                                 }
-                              }
-                           }
-                        },
-                        {
-                           "picture":{
-                              "id":"home_sustainable-products"
-                           },
-                           "action":{
-                              "label":{
-                                 "text":"Productos sustentables",
-                                 "color":"gray_450"
-                              },
-                              "target":"meli://generic_landing?url=https%3A%2F%2Fwww.mercadolibre.com.co%2Fproductos-sustentables"
-                           },
-                           "track_event":{
-                              "melidata_event":{
-                                 "path":"/home/tap",
-                                 "event_data":{
-                                    "is_modal":true,
-                                    "tag_id":"Productos sustentables",
-                                    "section":"button-row-discover",
-                                    "position":6
-                                 }
-                              }
-                           }
-                        },
-                        {
-                           "picture":{
-                              "id":"home_categorias"
-                           },
-                           "action":{
-                              "label":{
-                                 "text":"Todas las categorías",
-                                 "color":"gray_450"
-                              },
-                              "target":"meli://generic_landing?url=https%3A%2F%2Fwww.mercadolibre.com.co%2Fcategorias&back_style=menu&search_mode=none"
-                           },
-                           "track_event":{
-                              "melidata_event":{
-                                 "path":"/home/tap",
-                                 "event_data":{
-                                    "is_modal":true,
-                                    "tag_id":"Todas las categorías",
-                                    "section":"button-row-discover",
-                                    "position":7
-                                 }
-                              }
-                           }
-                        }
-                     ]
-                  }
-               ]
-            },
-            "track_event":{
-               "melidata_event":{
-                  "path":"/home/tap",
-                  "event_data":{
-                     "is_modal":false,
-                     "tag_id":"Ver más",
-                     "section":"button-row",
-                     "position":4
-                  }
-               }
-            }
-         }
-      },
-      {
-         "id":"registration",
-         "type":"action-card",
-         "track":{
-            "c_id":"/home/registration"
-         },
-         "header":{
-            "title":{
-               "text":"¡Crea una cuenta y mejora tu experiencia!",
-               "color":"black"
-            }
-         },
-         "primary_action":{
-            "label":{
-               "text":"Crear cuenta",
-               "color":"white",
-               "bg_color":"blue"
-            },
-            "target":"meli://registration/?flow=normal&origin=home&user_identified=NO&site_id=MCO#c_id=/home/registration/element&c_uid=6b2aec54-3fd8-4592-91f7-ce7ea8578abe"
-         },
-         "secondary_action":{
-            "label":{
-               "text":"Ingresar a mi cuenta",
-               "color":"blue"
-            },
-            "target":"meli://login/?flow=normal&origin=home&user_identified=NO&site_id=MCO#c_id=/home/registration/element&c_uid=3fe75009-fa2d-48a2-b4dd-006a92a1789c"
-         }
-      },
-      {
-         "id": "today-promotion-recommendations",
-         "type": "recommendations-seed",
+         "id": "promotions-recommendations",
+         "type": "recommendations",
          "track": {
-            "c_id": "/home/today-promotion-recommendations"
+            "c_id": "/home/promotions-recommendations"
          },
          "header": {
             "title": {
-               "text": "Oferta del día",
+               "text": "Ofertas",
                "color": "black"
             }
          },
-         "action": {
-            "label": {
-               "text": "Ver todas las ofertas",
-               "color": "blue"
-            },
-            "target": "meli://generic_landing?url=https://www.mercadolibre.com.co/ofertas#c_id=/home/today-promotion-recommendations&c_uid=37c589be-7d7b-4573-82f1-37e8fb1ee19a"
-         },
-         "reco_track": {
-            "event_data": {
-               "recommendations": {
-                  "has_errors": false,
-                  "has_recommendations": true,
-                  "backend_id": "fury_recommendations-functions-api",
-                  "function": "today_promotion",
-                  "recommendation_backend_name": "today_promotion",
-                  "items_extra_data": {},
-                  "trigger": {
-                     "trigger_type": "items",
-                     "items_info": {}
-                  },
-                  "recommended_items": [
-                     {
-                        "id": "MCO558338513"
-                     }
-                  ],
-                  "recommendation_client_id": "home_today-promotion-recommendations-seed",
-                  "config_type": ""
-               }
-            },
-            "experiments": []
-         },
-         "item": {
-            "id": "MCO558338513",
-            "track": {
-               "c_id": "/home/today-promotion-recommendations/element",
-               "c_element_order": 1
-            },
-            "title": "Televisor LG 43lm6300 Led Fhd - Active Hdr Smart Tv",
-            "permalink": "meli://items-core/MCO558338513/#reco_item_pos=0&reco_backend=today_promotion&reco_backend_type=function&reco_client=home_today-promotion-recommendations-seed&reco_id=6c766902-5d94-439e-bc4d-1b0a900eca5d&c_id=/home/today-promotion-recommendations/element&c_element_order=1&c_uid=db13d225-7981-4262-b3c2-7243790fb694",
-            "price": {
-               "value": 1195900,
-               "original_value": 1649900,
-               "currency_symbol": "$"
-            },
-            "label1": {
-               "color": "green_primary"
-            },
-            "label2": {
-               "text": "Envío gratis",
-               "color": "green_primary"
-            },
-            "discount": {
-               "text": "27% OFF",
-               "color": "green_primary"
-            },
-            "picture": {
-               "id": "722964-MCO45063823025_032021"
-            }
-         },
-         "action_type": "link"
-      },
-      {
-         "type":"collections",
-         "track":{
-            "c_id":"/home/collection-items-0",
-            "c_original_target":"meli://generic_landing?url=https%3A%2F%2Fofertas.mercadolibre.com.co%2Fproductos-internacionales%23DEAL_ID%3DMCO2001%26S%3DMKT%26V%3D1%26T%3DMS%26L%3Despecial_cbt",
-            "c_campaign":"PRODUCTOS+INTERNACIONALES"
-         },
-         "title":{
-            "text":"PRODUCTOS INTERNACIONALES",
-            "color":"white"
-         },
-         "picture":{
-            "url":{
-               "src":"https://http2.mlstatic.com/resources/deals/exhibitors_resources/mco-home-desktop-collections-picture-be71ec46-60f9-41d2-9adf-71230a69ea34.jpg"
-            }
-         },
-         "action":{
-            "target":"meli://search?deal=MCO2001#c_id=/home/collection-items-0/element&c_campaign=PRODUCTOS+INTERNACIONALES&c_uid=c9807aea-dc49-4f72-9233-9529cd5b604a"
-         },
-         "items":[
+         "items": [
             {
-               "picture":{
-                  "id":"988164-CBT44097093450_112020"
-               }
-            },
-            {
-               "picture":{
-                  "id":"822519-CBT44025314346_112020"
-               }
-            },
-            {
-               "picture":{
-                  "id":"609846-CBT43811358644_102020"
-               }
-            },
-            {
-               "picture":{
-                  "id":"760884-MLM41160354077_032020"
-               }
-            },
-            {
-               "picture":{
-                  "id":"835593-MLM32799240025_112019"
-               }
-            },
-            {
-               "picture":{
-                  "id":"968970-CBT44024912543_112020"
-               }
-            },
-            {
-               "picture":{
-                  "id":"968647-CBT44097093754_112020"
-               }
-            },
-            {
-               "picture":{
-                  "id":"722300-CBT45090274331_032021"
-               }
-            }
-         ]
-      },
-      {
-         "id":"advertisement-1",
-         "type":"ad",
-         "track":{
-            "c_id":"/home/ad-1"
-         },
-         "template_id":"11828126",
-         "ad_unit":"/105773011/MCO_HOME"
-      },
-      {
-         "id":"discovery-0",
-         "type":"discovery",
-         "track":{
-            "c_id":"/home/discovery-0"
-         },
-         "title":{
-            "text":"OFICINAS",
-            "color":"black"
-         },
-         "element":{
-            "track":{
-               "c_id":"/home/discovery-0/element",
-               "c_original_target":"meli://search?go=https://listado.mercadolibre.com.co/equipamiento-oficinas-mesas-sillas-escritorios/nuevo/_Envio_MercadoEnvios_DisplayType_G_BestSellers_YES#DEAL_ID=MCO&S=MKT&V=1&T=DES&L=especial_oficinas",
-               "c_campaign":"especial_oficinas"
-            },
-            "picture":{
-               "url":{
-                  "src":"https://http2.mlstatic.com/resources/deals/exhibitors_resources/mco-home-desktop-discovery-picture-3ef7265c-7049-441e-bdc2-d85932f46cc2.jpg"
-               }
-            },
-            "action":{
-               "label":{
-                  "text":"Ver más",
-                  "color":"blue"
+               "id": "MCO558338513",
+               "track": {
+                  "c_id": "/home/promotions-recommendations/element",
+                  "c_element_order": 1
                },
-               "target":"meli://search?go=https://listado.mercadolibre.com.co/equipamiento-oficinas-mesas-sillas-escritorios/nuevo/_Envio_MercadoEnvios_DisplayType_G_BestSellers_YES#DEAL_ID=MCO&S=MKT&V=1&T=DES&L=especial_oficinas&c_id=/home/discovery-0/element&c_campaign=especial_oficinas&c_uid=52697348-7255-4e0b-a1f3-ca4708719d88"
-            },
-            "text":{
-               "text":"RENUEVA TU\nESPACIO DE TRABAJO",
-               "color":"black"
-            }
-         }
-      },
-      {
-         "type":"collections",
-         "track":{
-            "c_id":"/home/collection-items-1",
-            "c_original_target":"meli://generic_landing?url=https%3A%2F%2Fofertas.mercadolibre.com.co%2Fenvios-rapidos%23DEAL_ID%3DMCO1976%26S%3DMKT%26V%3D1%26T%3DMS%26L%3Despecial_enviosrapidos",
-            "c_campaign":"ENV%C3%8DOS+R%C3%81PIDOS"
-         },
-         "title":{
-            "text":"ENVÍOS RÁPIDOS",
-            "color":"white"
-         },
-         "picture":{
-            "url":{
-               "src":"https://http2.mlstatic.com/resources/deals/exhibitors_resources/mco-home-desktop-collections-picture-f8efd79c-f961-4a53-9ade-0553e28140fa.jpg"
-            }
-         },
-         "action":{
-            "target":"meli://search?deal=MCO1976#c_id=/home/collection-items-1/element&c_campaign=ENV%C3%8DOS+R%C3%81PIDOS&c_uid=115b8548-6ff2-452e-a7c0-ef7f820963d0"
-         },
-         "items":[
-            {
-               "picture":{
-                  "id":"605379-MCO45172524462_032021"
-               }
-            },
-            {
-               "picture":{
-                  "id":"810449-MCO45493655846_042021"
-               }
-            },
-            {
-               "picture":{
-                  "id":"701251-MCO43639422622_102020"
-               }
-            },
-            {
-               "picture":{
-                  "id":"725107-MCO44772806106_022021"
-               }
-            },
-            {
-               "picture":{
-                  "id":"976338-MCO45234582789_032021"
-               }
-            },
-            {
-               "picture":{
-                  "id":"717808-MCO44946066460_022021"
-               }
-            },
-            {
-               "picture":{
-                  "id":"893961-MCO44386408550_122020"
-               }
-            },
-            {
-               "picture":{
-                  "id":"996760-MCO45390466969_032021"
-               }
-            }
-         ]
-      },
-      {
-         "type":"collections",
-         "track":{
-            "c_id":"/home/collection-items-2",
-            "c_original_target":"meli://generic_landing?url=https%3A%2F%2Flistado.mercadolibre.com.co%2F_Deal_conoce-emprendedores%23DEAL_ID%3DMCO1878%26S%3DMKT%26V%3D1%26T%3DMS%26L%3Despecial_emprendedores",
-            "c_campaign":"EMPRENDEDORES"
-         },
-         "title":{
-            "text":"EMPRENDEDORES",
-            "color":"white"
-         },
-         "picture":{
-            "url":{
-               "src":"https://http2.mlstatic.com/resources/deals/exhibitors_resources/mco-home-desktop-collections-picture-c5d09f4d-2ecb-4f3e-8702-fccbdaea52e4.jpg"
-            }
-         },
-         "action":{
-            "target":"meli://search?deal=MCO1878#c_id=/home/collection-items-2/element&c_campaign=EMPRENDEDORES&c_uid=434593df-cafc-4433-9fa0-936e1c400737"
-         },
-         "items":[
-            {
-               "picture":{
-                  "id":"746624-MCO32599645701_102019"
-               }
-            },
-            {
-               "picture":{
-                  "id":"835979-MCO43919470167_102020"
-               }
-            },
-            {
-               "picture":{
-                  "id":"611294-MCO31007293103_062019"
-               }
-            },
-            {
-               "picture":{
-                  "id":"875443-MCO44907797716_022021"
-               }
-            },
-            {
-               "picture":{
-                  "id":"795332-MCO43578344167_092020"
-               }
-            },
-            {
-               "picture":{
-                  "id":"630015-MCO41805835214_052020"
-               }
-            },
-            {
-               "picture":{
-                  "id":"746215-MCO31110754605_062019"
-               }
-            },
-            {
-               "picture":{
-                  "id":"990732-MCO31098832042_062019"
-               }
-            }
-         ]
-      },
-      {
-         "id":"discovery-1",
-         "type":"discovery",
-         "track":{
-            "c_id":"/home/discovery-1"
-         },
-         "title":{
-            "text":"HERRAMIENTAS",
-            "color":"black"
-         },
-         "element":{
-            "track":{
-               "c_id":"/home/discovery-1/element",
-               "c_original_target":"meli://generic_landing?url=https://www.mercadolibre.com.co/c/herramientas-y-construccion#DEAL_ID=&S=MKT&V=2&T=DES&L=especial_herramientas",
-               "c_campaign":"especial_herramientas"
-            },
-            "picture":{
-               "url":{
-                  "src":"https://http2.mlstatic.com/resources/deals/exhibitors_resources/mco-home-desktop-discovery-picture-2677eaad-76b2-4cb8-82b4-bf53fe0c7bb4.jpg"
-               }
-            },
-            "action":{
-               "label":{
-                  "text":"Ver más",
-                  "color":"blue"
+               "title": "Televisor LG 43lm6300 Led Fhd - Active Hdr Smart Tv",
+               "permalink": "meli://items-core/MCO558338513/#reco_item_pos=0&reco_backend=promotions-sorted-by-score-mco-B&reco_backend_type=low_level&reco_client=home_seller-promotions-recommendations&reco_id=3fcfd05f-6f39-4759-84cb-cab7b6e29d27&c_id=/home/promotions-recommendations/element&c_element_order=1&c_uid=c1e694b7-83b2-4a29-9ad3-c1e1988e8d5a",
+               "price": {
+                  "value": 1195900,
+                  "original_value": 1649900,
+                  "currency_symbol": "$"
                },
-               "target":"meli://generic_landing?url=https://www.mercadolibre.com.co/c/herramientas-y-construccion#DEAL_ID=&S=MKT&V=2&T=DES&L=especial_herramientas&c_id=/home/discovery-1/element&c_campaign=especial_herramientas&c_uid=bc537431-b60d-48f9-8bcf-292790d9533a"
-            },
-            "text":{
-               "text":"ENCUENTRA LOS\nMEJORES PRODUCTOS",
-               "color":"black"
-            }
-         }
-      },
-      {
-         "id":"advertisement-2",
-         "type":"ad",
-         "track":{
-            "c_id":"/home/ad-2"
-         },
-         "template_id":"11828126",
-         "ad_unit":"/105773011/MCO_HOME_2"
-      },
-      {
-         "type":"collections",
-         "track":{
-            "c_id":"/home/collection-items-3",
-            "c_original_target":"meli://generic_landing?url=https%3A%2F%2Fofertas.mercadolibre.com.co%2Fsinlanding2021%23DEAL_ID%3DMCO2298%26S%3DMKT%26V%3D1%26T%3DMS%26L%3Despecial_sinlanding",
-            "c_campaign":"OFERTAS+DEL+D%C3%8DA"
-         },
-         "title":{
-            "text":"OFERTAS DEL DÍA",
-            "color":"white"
-         },
-         "picture":{
-            "url":{
-               "src":"https://http2.mlstatic.com/resources/deals/exhibitors_resources/mco-home-desktop-collections-picture-a206212b-2521-466a-9591-765a6de6a14a.jpg"
-            }
-         },
-         "action":{
-            "target":"meli://search?deal=MCO2298#c_id=/home/collection-items-3/element&c_campaign=OFERTAS+DEL+D%C3%8DA&c_uid=6d4c6781-792d-435a-8843-e86cfd883d64"
-         },
-         "items":[
-            {
-               "picture":{
-                  "id":"701251-MCO43639422622_102020"
+               "label1": {
+                  "color": "green_primary"
+               },
+               "label2": {
+                  "text": "Envío gratis",
+                  "color": "green_primary"
+               },
+               "discount": {
+                  "text": "27% OFF",
+                  "color": "green_primary"
+               },
+               "picture": {
+                  "id": "722964-MCO45063823025_032021",
+                  "url": "https://http2.mlstatic.com/D_Q_NP_722964-MCO45063823025_032021-R.jpg"
                }
             },
             {
-               "picture":{
-                  "id":"996760-MCO45390466969_032021"
+               "id": "MCO613405741",
+               "track": {
+                  "c_id": "/home/promotions-recommendations/element",
+                  "c_element_order": 2
+               },
+               "title": "Maquina Pulverizadora Para Pintar  Klatter",
+               "permalink": "meli://items-core/MCO613405741/?variation=79738885215#reco_item_pos=1&reco_backend=promotions-sorted-by-score-mco-B&reco_backend_type=low_level&reco_client=home_seller-promotions-recommendations&reco_id=3fcfd05f-6f39-4759-84cb-cab7b6e29d27&c_id=/home/promotions-recommendations/element&c_element_order=2&c_uid=12741017-82bf-4e2f-a083-665eec5a3e0d",
+               "price": {
+                  "value": 124900,
+                  "original_value": 149900,
+                  "currency_symbol": "$"
+               },
+               "label1": {
+                  "color": "green_primary"
+               },
+               "label2": {
+                  "text": "Envío gratis",
+                  "color": "green_primary"
+               },
+               "label2_icon": "home_green-fulfillment",
+               "discount": {
+                  "text": "16% OFF",
+                  "color": "green_primary"
+               },
+               "picture": {
+                  "id": "838717-MCO45331202648_032021",
+                  "url": "https://http2.mlstatic.com/D_Q_NP_838717-MCO45331202648_032021-R.jpg"
                }
             },
             {
-               "picture":{
-                  "id":"842514-MCO44095753078_112020"
+               "id": "MCO468795741",
+               "track": {
+                  "c_id": "/home/promotions-recommendations/element",
+                  "c_element_order": 3
+               },
+               "title": "Audífonos Bluetooth Deportivos U8 Anti Sudor Original Nuevo",
+               "permalink": "meli://items-core/MCO468795741/?variation=33721746167#reco_item_pos=2&reco_backend=promotions-sorted-by-score-mco-B&reco_backend_type=low_level&reco_client=home_seller-promotions-recommendations&reco_id=3fcfd05f-6f39-4759-84cb-cab7b6e29d27&c_id=/home/promotions-recommendations/element&c_element_order=3&c_uid=104ed7db-480c-42e0-80da-b95572372fc7",
+               "price": {
+                  "value": 44910,
+                  "original_value": 49900,
+                  "currency_symbol": "$"
+               },
+               "label1": {
+                  "color": "green_primary"
+               },
+               "label2_icon": "home_green-fulfillment",
+               "discount": {
+                  "text": "10% OFF",
+                  "color": "green_primary"
+               },
+               "picture": {
+                  "id": "989524-MCO45356081682_032021",
+                  "url": "https://http2.mlstatic.com/D_Q_NP_989524-MCO45356081682_032021-R.jpg"
                }
             },
             {
-               "picture":{
-                  "id":"902801-MCO43783327781_102020"
-               }
-            },
-            {
-               "picture":{
-                  "id":"903052-MCO31135110162_062019"
-               }
-            },
-            {
-               "picture":{
-                  "id":"651650-MCO42269487096_062020"
-               }
-            },
-            {
-               "picture":{
-                  "id":"984706-MCO44358158031_122020"
-               }
-            },
-            {
-               "picture":{
-                  "id":"868281-MCO43484091250_092020"
-               }
-            }
-         ]
-      },
-      {
-         "type":"categories",
-         "track":{
-            "c_id":"/home/categories"
-         },
-         "header":{
-            "title":{
-               "text":"Categorías",
-               "color":"black"
-            }
-         },
-         "elements":[
-            {
-               "id":"MCO1051",
-               "title":{
-                  "text":"Celulares y Teléfonos",
-                  "color":"black"
+               "id": "MCO515515032",
+               "track": {
+                  "c_id": "/home/promotions-recommendations/element",
+                  "c_element_order": 4
                },
-               "picture":{
-                  "id":"home_mobile-button"
+               "title": "Faja Moldeadora Xd / Cinturilla De Avispa Xd",
+               "permalink": "meli://items-core/MCO515515032/#reco_item_pos=3&reco_backend=promotions-sorted-by-score-mco-B&reco_backend_type=low_level&reco_client=home_seller-promotions-recommendations&reco_id=3fcfd05f-6f39-4759-84cb-cab7b6e29d27&c_id=/home/promotions-recommendations/element&c_element_order=4&c_uid=196d2e9f-2788-4913-922d-e50aa06d5b5d",
+               "price": {
+                  "value": 51290,
+                  "original_value": 53990,
+                  "currency_symbol": "$"
                },
-               "action":{
-                  "target":"meli://generic_landing?url=https://www.mercadolibre.com.co/c/celulares-y-telefonos&search_mode=none#c_id=/home/categories/element&c_uid=cdc96af7-0b79-40d1-af35-a54053a37059&c_category_name=Celulares+y+Tel%C3%A9fonos&c_category=MCO1051"
+               "label1": {
+                  "color": "green_primary"
                },
-               "track":{
-                  "category_id":"MCO1051",
-                  "category_name":"Celulares+y+Tel%C3%A9fonos",
-                  "c_id":"/home/categories/element"
-               }
-            },
-            {
-               "id":"MCO1648",
-               "title":{
-                  "text":"Computación",
-                  "color":"black"
+               "label2": {
+                  "text": "Envío gratis",
+                  "color": "green_primary"
                },
-               "picture":{
-                  "id":"home_tv-2"
+               "label2_icon": "home_green-fulfillment",
+               "discount": {
+                  "text": "5% OFF",
+                  "color": "green_primary"
                },
-               "action":{
-                  "target":"meli://generic_landing?url=https://www.mercadolibre.com.co/c/computacion&search_mode=none#c_id=/home/categories/element&c_uid=a5619803-e637-4a2e-959d-f352402494ce&c_category_name=Computaci%C3%B3n&c_category=MCO1648"
-               },
-               "track":{
-                  "category_id":"MCO1648",
-                  "category_name":"Computaci%C3%B3n",
-                  "c_id":"/home/categories/element"
-               }
-            },
-            {
-               "id":"MCO1246",
-               "title":{
-                  "text":"Belleza y Cuidado Personal",
-                  "color":"black"
-               },
-               "picture":{
-                  "id":"home_makeup"
-               },
-               "action":{
-                  "target":"meli://generic_landing?url=https://www.mercadolibre.com.co/c/belleza-y-cuidado-personal&search_mode=none#c_id=/home/categories/element&c_uid=9a0fda86-3b1f-43f6-9c29-22ea98be4b56&c_category_name=Belleza+y+Cuidado+Personal&c_category=MCO1246"
-               },
-               "track":{
-                  "category_id":"MCO1246",
-                  "category_name":"Belleza+y+Cuidado+Personal",
-                  "c_id":"/home/categories/element"
-               }
-            },
-            {
-               "id":"MCO1000",
-               "title":{
-                  "text":"Electrónica, Audio y Video",
-                  "color":"black"
-               },
-               "picture":{
-                  "id":"home_audio-92"
-               },
-               "action":{
-                  "target":"meli://generic_landing?url=https://www.mercadolibre.com.co/c/electronica-audio-y-video&search_mode=none#c_id=/home/categories/element&c_uid=74e3aac6-1454-415a-bdfe-bb39fa6d68ac&c_category_name=Electr%C3%B3nica%2C+Audio+y+Video&c_category=MCO1000"
-               },
-               "track":{
-                  "category_id":"MCO1000",
-                  "category_name":"Electr%C3%B3nica%2C+Audio+y+Video",
-                  "c_id":"/home/categories/element"
-               }
-            },
-            {
-               "id":"MCO1276",
-               "title":{
-                  "text":"Deportes y Fitness",
-                  "color":"black"
-               },
-               "picture":{
-                  "id":"home_ball-soccer"
-               },
-               "action":{
-                  "target":"meli://generic_landing?url=https://www.mercadolibre.com.co/c/deportes-y-fitness&search_mode=none#c_id=/home/categories/element&c_uid=3a370e97-4d2b-4a4e-9d42-676bbf5d302c&c_category_name=Deportes+y+Fitness&c_category=MCO1276"
-               },
-               "track":{
-                  "category_id":"MCO1276",
-                  "category_name":"Deportes+y+Fitness",
-                  "c_id":"/home/categories/element"
-               }
-            },
-            {
-               "id":"MCO1743",
-               "title":{
-                  "text":"Carros, Motos y Otros",
-                  "color":"black"
-               },
-               "picture":{
-                  "id":"home_car-front"
-               },
-               "action":{
-                  "target":"meli://classifieds-homes/motors#c_category=MCO1743"
-               },
-               "track":{
-                  "category_id":"MCO1743",
-                  "category_name":"Carros%2C+Motos+y+Otros",
-                  "c_id":"/home/categories/element"
+               "picture": {
+                  "id": "847510-MCO31354440617_072019",
+                  "url": "https://http2.mlstatic.com/D_Q_NP_847510-MCO31354440617_072019-R.jpg"
                }
             }
          ],
-         "action":{
-            "label":{
-               "text":"Ver todas las categorías",
-               "color":"blue"
+         "action": {
+            "label": {
+               "text": "Ver todas",
+               "color": "blue"
             },
-            "target":"meli://generic_landing?url=https%3A%2F%2Fwww.mercadolibre.com.co%2Fcategorias&back_style=menu&search_mode=none"
+            "target": "meli://generic_landing?url=https://www.mercadolibre.com.co/ofertas#c_id=/home/promotions-recommendations/element&c_uid=cb72e8ca-015e-4dc5-8296-06a3330a470f"
+         },
+         "render": "mosaic",
+         "reco_track": {
+            "event_data": {
+               "recommendations": {
+                  "model_version": "1.0",
+                  "model_id": "promotions-sorted-by-score",
+                  "recommended_items": [
+                     {
+                        "id": "MCO558338513"
+                     },
+                     {
+                        "id": "MCO613405741"
+                     },
+                     {
+                        "id": "MCO468795741"
+                     },
+                     {
+                        "id": "MCO515515032"
+                     }
+                  ],
+                  "backend_id": "MCO-today-promotions-backend-api"
+               }
+            },
+            "experiments": [
+               {
+                  "name": "recommendations/prueba-promotions-MCO",
+                  "variant_id": 5531
+               }
+            ]
          }
       }
-
-
-
    ],
    "picture_config":{
       "template_seed":"https://http2.mlstatic.com/S_Q_NP_2X_{id}-V.webp",

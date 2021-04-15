@@ -1,26 +1,51 @@
 package com.example.testmercadolibre.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.testmercadolibre.R
 import com.example.testmercadolibre.adapters.ExhibitorAdapter
+import com.example.testmercadolibre.adapters.PromotionsAdapter
+import com.example.testmercadolibre.model.ItemModel
 import com.example.testmercadolibre.utils.Status
 import com.example.testmercadolibre.viewmodel.HomeViewModel
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_home.search
-import kotlinx.android.synthetic.main.activity_search.*
 import kotlinx.android.synthetic.main.activity_search.loader
+
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var homeViewModel: HomeViewModel
     private lateinit var exhibitorAdapter: ExhibitorAdapter
+    private lateinit var promotionsAdapter: PromotionsAdapter
+    private var scroll : Int = 0;
+    private val timer: CountDownTimer by lazy {
+        object : CountDownTimer(60000, 4000) {
+            override fun onFinish() {
+                timer.start()
+            }
+
+            override fun onTick(millisUntilFinished: Long) {
+                if (scroll == 4){
+                    exhibitorRV.smoothScrollToPosition(scroll);
+                    scroll = 0
+                }else {
+                    exhibitorRV.smoothScrollToPosition(scroll);
+                    scroll ++
+                }
+            }
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +54,7 @@ class HomeActivity : AppCompatActivity() {
         initViewModel()
         observeViewModel()
         searchListener()
-        homeViewModel.getHome(this)
+        if (savedInstanceState==null) homeViewModel.getHome(this)
     }
 
     private fun initViewModel(){
@@ -40,8 +65,11 @@ class HomeActivity : AppCompatActivity() {
         homeViewModel.components.observe(this, Observer {
             it.components.forEach {
                 if (it.type.equals("exhibitors")){
+                    timer.start()
                     exhibitorAdapter.setData(it.elements as ArrayList)
-                    return@forEach
+                }else if (it.type.equals("recommendations")){
+                    promotionsAdapter.setData(it.items as ArrayList)
+
                 }
             }
         })
@@ -50,17 +78,22 @@ class HomeActivity : AppCompatActivity() {
             when(it){
                 Status.DONE->{
                     loader.visibility = View.GONE
-                    exhibitorRV.visibility = View.VISIBLE
+                    exhibitorRV.visibility = VISIBLE
+                    promotionsContainer.visibility = VISIBLE
 
                 }
                 Status.LOADING->{
-                    loader.visibility = View.VISIBLE
-                    exhibitorRV.visibility = View.GONE
+                    loader.visibility = VISIBLE
+                    exhibitorRV.visibility = GONE
+                    promotionsContainer.visibility = GONE
+
 
                 }
                 Status.ERROR->{
-                    loader.visibility = View.GONE
-                    exhibitorRV.visibility = View.GONE
+                    loader.visibility = GONE
+                    exhibitorRV.visibility = GONE
+                    promotionsContainer.visibility = GONE
+
                     Toast.makeText(this,"Ha ocurrido un error", Toast.LENGTH_SHORT).show()
                 }
 
@@ -72,6 +105,9 @@ class HomeActivity : AppCompatActivity() {
         exhibitorAdapter = ExhibitorAdapter()
         exhibitorRV.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL ,false)
         exhibitorRV.adapter = exhibitorAdapter
+        promotionsAdapter = PromotionsAdapter()
+        promotionsRV.layoutManager = GridLayoutManager(this,2)
+        promotionsRV.adapter = promotionsAdapter
     }
 
     private fun searchListener(){
@@ -102,4 +138,8 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        timer.cancel()
+    }
 }

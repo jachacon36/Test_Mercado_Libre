@@ -10,4 +10,5 @@
     <string name="add_car">Agregar al carrito</string>
     <string name="new_title">Nuevo</string>
     <string name="used_title">Usado</string>
+    <string name="promotions">Ofertas</string>
 </resources>

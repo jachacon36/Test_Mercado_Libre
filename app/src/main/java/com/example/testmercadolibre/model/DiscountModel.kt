@@ -5,8 +5,6 @@ import kotlinx.android.parcel.Parcelize
 
 
 @Parcelize
-data class ComponentModel (
-    val type :String,
-    val elements : List<ElementModel>,
-    val items: List<ItemModel>
+data class DiscountModel (
+    val text :String
 ): Parcelable
